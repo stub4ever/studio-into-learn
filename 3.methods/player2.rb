@@ -1,4 +1,4 @@
-puts "* Write a Method *****"
+puts "* 1. Write a Method *****"
 puts " "
 
 #Define a say_hello method that takes a name paramter and prints name
@@ -20,8 +20,7 @@ end
 puts say_hello("emiel")
 
 puts ""
-
-puts "* Add a Healh Parameter *****"
+puts "* 2. Add a Healh Parameter *****"
 puts ""
 
 def say_hello(name2, health)
@@ -32,8 +31,7 @@ puts say_hello("jan", 60) # call the player's name and health
 puts say_hello("kees", 125)
 
 puts ""
-
-puts "* Set a Default Parameter Value *****"
+puts "* 3. Set a Default Parameter Value *****"
 puts ""
 
 #Set health parameter as default value of 50
@@ -45,8 +43,7 @@ puts say_hello("koen") #print default 50
 puts say_hello("hugo", 75)
 
 puts ""
-
-puts "* Calling Other Methods *****"
+puts "* 4. Calling Other Methods *****"
 puts ""
 
 # Add player's information to include the current time, which is returned by another method.

@@ -1,4 +1,4 @@
-puts "* Print Player info *****"
+puts "* 1. Print Player info *****"
 puts " "
 
 name1 = 'quoc'  #variable assign to value
@@ -15,7 +15,7 @@ puts "#{name1}'s health is #{health1 / 15.0}"
 puts "#{name1}'s health is #{health1 / 15}"
 
 puts " "
-puts "* Print a list of players *****"
+puts "* 2. Print a list of players *****"
 puts " "
 
 # Output each player's name separate line and indented with a tab

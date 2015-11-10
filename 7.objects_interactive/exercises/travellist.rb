@@ -1,9 +1,9 @@
 class List
-  attr_accessor :list
-  attr_reader :total
+  attr_accessor :title
+  attr_reader :activities 
   
-  def initialize(list)
-    @list = list.upcase
+  def initialize(title)
+    @title = title.upcase
     @activities = []
   end
   
@@ -15,46 +15,61 @@ class List
     @activities.delete_at(0)
   end
   
+  def stats
+    puts "#{@title} : (#{@activities.size})"
+    @activities.each do |activity|
+      puts activity
+    end
+    
+    @activities.each do |user|
+      user.thumbs_up
+      user.thumbs_down
+      puts user
+    end
+  end
+  
+
 end
 
-
-class Activity
-  attr_accessor :name
-  attr_reader :activities, :likes
-  
-  def initialize(activity, likes_count=0)
-    @activity = name.capitalize 
-    @likes_count = likes_count
-  end
-  
-  def add
-  end
-  
-  def remove
-  end
-  
-end
 
 class User
   attr_accessor :name
-  attr_reader :followers
+  attr_reader :rates
   
-  def initialize(user, followers=0)
-    @user = user.capitialize
-    @followers = followers
+  def initialize(user,activity, rates=0)
+    @user = user.capitalize
+    @activity = activity.capitalize
+    @rates = rates
   end
   
-  def feed
+  def to_s
+    "#{@User}"
   end
   
-  def like
-    @likes_count += 1
-    puts "#{@user} has like #{@activity}"
+  def thumbs_up
+    @rates += 1
+    "#{@user} has thumbs up the #{@activity} :)"
   end
   
-  def unlike
-    @likes -= 1
-    puts "#{@user} has unlike #{@activity}"
+  def thumbs_down
+    @rate -= 1
+    "#{@user} has thumbs down the #{@activity} :("
   end
+  
 end
+
+user1 = User.new("stuboki", "Skydiving")
+user2 = User.new("Quoc", "Toy da tour")
+user3 = User.new("An", "Climb surivle jungle")
+
+list1 = List.new("Ho chi minh")
+list2 = List.new("Seoul")
+list3 = List.new("tokyo")
+
+
+
+
+
+
+
 

@@ -31,6 +31,7 @@ class Player
     @health + @name.length
   end
   
+  
 end
 
 player1 = Player.new('quoc', 100)
